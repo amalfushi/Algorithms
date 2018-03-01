@@ -1,3 +1,7 @@
+// Given a two strings, Determin if there is only a single difference between the two where a difference can be: 
+//      removing a letter, adding a letter, or replacing a single letter with another.
+
+
 function IsOneAway(first, second) {
 
     //length check
@@ -23,37 +27,6 @@ function IsOneAway(first, second) {
         p2++; //always move longer pointer
     }
     return true;
-
-    // //check for some early exit cases
-    // if (first == second) return false;
-    // if (Math.abs(first.lenth - second.length) > 1) return false;
-
-    // //determine longest string
-    // if (first.length >= second.length) {
-    //     var short = second, long = first;
-    // } else {
-    //     var short = first, long = second;
-    // }
-
-    // //generate a dictionary with the counts for each character in each string
-    // let chars = {};
-    // for (let i = 0; i < long.length; i++){
-    //     if (!chars[long[i]]) chars[long[i]] = [1, 0];
-    //     else chars[long[i]][0]++;
-
-    //     if (short[i]) {
-    //         if (!chars[short[i]]) chars[short[i]] = [0, 1];
-    //         else chars[short[i]][1]++;
-    //     }
-    // }
-
-    // let count = 0;
-    // for (var c in chars) {
-    //     if (chars[c][0] != chars[c][1]) count += Math.abs(chars[c][0] - chars[c][1]);
-    // }
-
-    // if (count > 2) return false;
-    // return true;
 }
 
 console.log(IsOneAway("pass", "past"))

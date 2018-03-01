@@ -1,15 +1,8 @@
-function IsUnique(s){
-    // let chars = s.split('');
-    // let seen = [];
+//Given a string, determine whether a string contains only unique characters.
 
-    // while(chars.length){
-    //     if(seen.includes(chars[chars.length-1])) return false;
-    //     else seen.push(chars.pop());
-    // }
-    // return true;
-
-    for (let i = 0; i < s.length; i++){
-        if (i != s.lastIndexOf(s[i])) return false;
+function IsUnique(s) {
+    for (let i = 0; i < s.length; i++) {            // for each character in the string
+        if (i != s.lastIndexOf(s[i])) return false; // check to see if the index of the character matches the last index of the character specified.
     }
     return true;
 }
