@@ -1,6 +1,6 @@
 // Given two strings, determine they are permutations of each other (eg: both have the same characters in different order).
 
-function isPermute(s1, s2) {
+function IsPermute(s1, s2) {
     // split each string into a sorted array of characters
     let a = s1.split('').sort(); 
     let b = s2.split('').sort();
