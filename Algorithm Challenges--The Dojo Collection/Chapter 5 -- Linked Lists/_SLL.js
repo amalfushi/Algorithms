@@ -48,6 +48,18 @@ class SLL {
         else this.tail.next = nn, this.tail = nn; // more than one node
         return this;
     }
+
+    length() {
+        let runner = this.head;
+        let length = 0;
+
+        while(runner) {
+            runner = runner.next;
+            length++;
+        }
+        
+        return length;
+    }
 }
 
 exports.Node = Node;
