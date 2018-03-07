@@ -2,9 +2,25 @@ const link = require("./_SLL.js");
 
 
 // given a pointer to the first list node, return the last value in the list;
+
+// book version
 function SllLast (node) {
     while(node.next) node = node.next;
     return node.value;
+}
+
+// part of the class version
+link.SLL.prototype.back = function() {
+    // using Sll tail
+    // return this.tail.value;
+
+
+    // not using the SLL tail
+    if (this.head == null) return null;
+    let cur = this.head;
+    
+    while (cur.next) cur = cur.next;
+    return cur.value;
 }
 
 

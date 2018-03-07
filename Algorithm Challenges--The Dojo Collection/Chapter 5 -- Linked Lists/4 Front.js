@@ -2,7 +2,7 @@ const link = require("./_SLL.js");
 
 
 //return the value at the head of the list
-link.SLL.prototype.front = function (c) {
+link.SLL.prototype.front = function () {
     if (this.head == null) return null;
     return this.head.value;
 }
