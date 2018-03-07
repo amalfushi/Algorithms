@@ -3,7 +3,7 @@ const link = require("./_SLL.js");
 
 // create a standalone function that removes the last node in the list and returns the new list
 
-function SllPop(sll) {
+function RemoveBack(sll) {
     if (sll.head == null) return sll; // check for empty sll
     if (sll.head.next == null) {      // check for only one node
         sll.head = null
@@ -12,19 +12,21 @@ function SllPop(sll) {
 
     let cur = sll.head;
 
-    while (cur.next) {               // go to second to last node
+    // go to second to last node
+    while (cur.next) {
         if (cur.next.next == null) {
             break;
         }
         cur = cur.next;
     }
-
-    cur.next = null;                // get rid of the last node via garbage collection
+    // get rid of the last node via garbage collection
+    cur.next = null;
     return sll;
 }
 
 
 // class version
+// ==================================================
 link.SLL.prototype.pop = function () {
     if (this.head == null) return this;
     if (this.head == this.tail) {
@@ -34,7 +36,7 @@ link.SLL.prototype.pop = function () {
     }
 
     let cur = this.head;
-    while(cur.next) {
+    while (cur.next) {
         if (cur.next == this.tail) break;
         cur = cur.next;
     }
@@ -44,7 +46,7 @@ link.SLL.prototype.pop = function () {
 
     return this;
 }
-
+// ==================================================
 
 let list1 = new link.SLL();
 list1.add(9).add(8).add(7).add(6).add(5);
@@ -59,6 +61,6 @@ console.log(list1.pop().toString());
 console.log(list2.pop().toString());
 console.log(list3.pop().toString());
 
-console.log(SllPop(list1).toString());
-console.log(SllPop(list2).toString());
-console.log(SllPop(list3).toString());
+console.log(RemoveBack(list1).toString());
+console.log(RemoveBack(list2).toString());
+console.log(RemoveBack(list3).toString());

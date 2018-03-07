@@ -29,18 +29,6 @@ class SLL {
         return out.join("");
     }
 
-    // add(val) { // without tail
-    //     let nn = new Node(val);
-    //     if (this.head == null)  this.head = nn;
-    //     else {
-    //         let cur = this.head;
-    //         while(cur.next != null) cur = cur.next;
-    //         cur.next = nn;
-    //     }
-    //     this.tail = cur;
-    //     return this;
-    // }
-
     add(val) { // with tail
         let nn = new Node(val);
         if (this.tail == null) this.head = nn, this.tail = this.head; // no nodes
