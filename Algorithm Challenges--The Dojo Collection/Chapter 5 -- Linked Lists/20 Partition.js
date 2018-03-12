@@ -7,7 +7,7 @@ const link = require("./_SLL.js");
 
 // stand alone version
 // ==================================================
-function SllPartitioin(list, val) {
+function SllPartition(list, val) {
 }
 // ==================================================
 
@@ -54,8 +54,8 @@ let list2 = new link.SLL();
 list2.add("Barnaby Jones").add("tacocat").add("7").add("roqjieorpjl").add("The quickest dog gets the slowest ball");
 
 let list3 = new link.SLL();
-list3.add('e').add('e').add('e').add('a');
+list3.add('e').add('e').add('e').add('a').add('f');
 
 console.log(list1.partition(6).toString())
 console.log(list2.partition("roqjieorpjl").toString())
-console.log(list3.partition("6").toString())
+console.log(list3.partition("e").toString())
