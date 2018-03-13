@@ -1,7 +1,7 @@
 const link = require("../Chapter 5 -- Linked Lists/_SLL.js");
 
 
-// Determin if a SLL is a palindrome (the nodes could be read the same front-to-back and back-to-front).
+// Determine if a SLL is a palindrome (the nodes could be read the same front-to-back and back-to-front).
 //bonus: try doing so without additional memory
 
 
