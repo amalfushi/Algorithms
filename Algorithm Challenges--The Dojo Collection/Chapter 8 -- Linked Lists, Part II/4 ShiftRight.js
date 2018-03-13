@@ -66,3 +66,4 @@ console.log(SllShift(list1, 3).toString());
 
 console.log(list1.shift(22).toString());
 console.log(list1.shift(-4).toString());
+console.log(list1.shift(-18).toString());
