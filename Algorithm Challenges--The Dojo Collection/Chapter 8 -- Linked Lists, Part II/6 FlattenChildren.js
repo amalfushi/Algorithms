@@ -38,8 +38,8 @@ link.SLL.prototype.flattenChildren = function () {
     if (!this.head) return this;
     let cur = this.head;
     let prev = cur;
-    
-    while(cur) {
+
+    while (cur) {
         if (prev != cur) prev = cur;
         cur = cur.next;
         if (prev.child) {
@@ -56,21 +56,21 @@ link.SLL.prototype.flattenChildren = function () {
 
 
 // doesn't quite work
-link.SLL.prototype.unflattenChildren = function() {
+link.SLL.prototype.unflattenChildren = function () {
     if (!this.head) return this;
     let cur = this.head;
     let prev = cur;
     let running = false;
 
-    while(cur) {
-        
+    while (cur) {
+
         if (prev != cur && !running) prev = cur;
         console.log(prev.value, cur.value)
         cur = cur.next;
         // console.log(cur == prev.child.tail)
         if (!running && prev.child) running = true;
-        
-        else if (prev.child && prev.child.tail == cur){
+
+        else if (prev.child && prev.child.tail == cur) {
             console.log(cur.value, cur.next.value)
             // cur = cur.next;
             prev.next = cur.next;
