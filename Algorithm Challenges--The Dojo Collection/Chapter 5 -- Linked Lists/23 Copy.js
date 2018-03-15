@@ -50,3 +50,4 @@ console.log(list2.toString())
 let list3 = list2.copy().concat(list1);
 console.log(list3.toString());
 
+exports.copy;
