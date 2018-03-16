@@ -1,6 +1,6 @@
 const link = require("./_DLL.js");
 
-// Given a new value and an existing value, insert the new value before existing value
+// Given a node, remove it from a DLL;
 
 // class version
 // ==================================================

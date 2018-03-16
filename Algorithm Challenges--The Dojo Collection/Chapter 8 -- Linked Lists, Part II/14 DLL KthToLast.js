@@ -1,6 +1,6 @@
 const link = require("./_DLL.js");
 
-// Given a new value and an existing value, insert the new value before existing value
+// Given k, return the node that is k elements from the end of the list;
 
 // class version
 // ==================================================
