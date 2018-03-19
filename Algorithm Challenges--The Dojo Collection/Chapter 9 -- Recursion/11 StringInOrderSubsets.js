@@ -16,8 +16,8 @@ function strSubsets(str) {
         if (str.length < 1){
             return out.push(perm);
         }
-        rPermute(str.slice(1), perm + str[0]);
         rPermute(str.slice(1), perm);
+        rPermute(str.slice(1), perm + str[0]);
     }
 }
 
