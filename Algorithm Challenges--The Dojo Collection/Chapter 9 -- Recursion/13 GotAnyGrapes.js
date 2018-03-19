@@ -4,9 +4,12 @@
 //rGotGrapes([30, 25, 20, 40, 10, 15, 33, 21]) = 103 (30, 40, 33)
 
 function rGotGrapes(arr, idx) {
-    if (idx == 0) return arr[0];
-    if (idx == 1) return Math.max(arr[0], arr[1]);
-    return Math.max(rGotGrapes(arr, idx - 2) + arr[idx], rGotGrapes(arr, idx - 1));
+    if (idx == 0) return arr[0];        // if the recursive call has hit last element;
+    if (idx == 1) return Math.max(arr[0], arr[1]);      // ior hit the second to last element;
+    // otherwise return whichever is more :
+    //      the element at the current index plus this called with an index 2 away
+    // OR   the element this called at the index one away but not including the current index;
+    return Math.max(rGotGrapes(arr, idx - 2) + arr[idx], rGotGrapes(arr, idx - 1));     
 }
 
 
