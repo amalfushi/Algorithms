@@ -83,9 +83,11 @@ class BST {
     count(cur = this.root) {
         return !cur ? 0 : cur.left && cur.right ? 1 + this.size(cur.left) + this.size(cur.right) : cur.left ? 1 + this.size(cur.left) : cur.right ? 1 + this.size(cur.right) : 1;
     }
+
+    isEmpty(){
+        return this.root == null;
+    }
 }
 
-let nb = new BST();
-// nb.add(8).add(10).add(3).add(4).add(2);
-
-console.log(nb.count());
+exports.BTNode = BTNode;
+exports.BST = BST;
