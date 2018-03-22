@@ -17,9 +17,8 @@ link.BST.prototype.height = function (node = this.root) {
 }
 
 
+// let tree = new link.BST();
+// tree.add(5).add(8).add(4).add(10).add(9).add(-1).add(1).add(3)
+// console.log(tree.height());
 
-
-
-let tree = new link.BST();
-tree.add(5).add(8).add(4).add(10).add(9).add(-1).add(1).add(3)
-console.log(tree.height(tree.root));
+exports.height = link.BST.height;
