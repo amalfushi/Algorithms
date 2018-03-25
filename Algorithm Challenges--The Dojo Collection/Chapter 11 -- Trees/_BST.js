@@ -36,14 +36,10 @@ class BST {
         return this;
     }
 
-    contains(val) {
-        if (this.root) {
-            let cur = this.root;
-            while (cur) {
-                if (cur.value == val) return true;
-                if (val > cur.value) cur = cur.right;
-                else cur = cur.left;
-            }
+    contains(val, node = this.root) {
+        if (node) {
+            if (node.value == val) return true;
+            else return this.contains(val, node.left) || this.contains(val, node.right);
         }
         return false;
     }
@@ -84,8 +80,38 @@ class BST {
         return !cur ? 0 : cur.left && cur.right ? 1 + this.size(cur.left) + this.size(cur.right) : cur.left ? 1 + this.size(cur.left) : cur.right ? 1 + this.size(cur.right) : 1;
     }
 
-    isEmpty(){
+    isEmpty() {
         return this.root == null;
+    }
+
+    toString() {
+        this.traverseTree((node) => console.log(node.value));
+    }
+
+
+    //general purpose tree traversal
+    traverseTree(callback, order = "inorder", node = this.root) {
+        if (node) {
+            switch (order) {
+                case "inorder":
+                    this.traverseTree(callback, "inorder", node.left);
+                    callback(node);
+                    this.traverseTree(callback, "inorder", node.right);
+                    break;
+                case "preorder":
+                    callback(node);
+                    this.traverseTree(callback, "preorder", node.left);
+                    this.traverseTree(callback, "preorder", node.right);
+                    break;
+                case "postorder":
+                    this.traverseTree(callback, "postorder", node.right);
+                    callback(node);
+                    this.traverseTree(callback, "postorder", node.left);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
 
