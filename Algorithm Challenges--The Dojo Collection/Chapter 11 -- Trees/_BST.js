@@ -105,8 +105,8 @@ class BST {
                     break;
                 case "postorder":
                     this.traverseTree(callback, "postorder", node.right);
-                    callback(node);
                     this.traverseTree(callback, "postorder", node.left);
+                    callback(node);
                     break;
                 default:
                     break;
