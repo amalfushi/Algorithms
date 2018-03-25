@@ -14,6 +14,7 @@ function arrayToBST(arr, start = 0, end = arr.length - 1) {
     return node;
 }
 
-let tree = new link.BST();
-tree.root = arrayToBST([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-console.log(tree);
+// let tree = new link.BST();
+// tree.root = arrayToBST([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+// console.log(tree);
+exports.arrayToBST = arrayToBST;
