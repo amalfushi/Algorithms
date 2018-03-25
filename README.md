@@ -9,6 +9,8 @@ This is an in-progress collection of algorithms challenges I have completed acro
 2. [Chapter 5: Linked Lists](https://github.com/amalfushi/Algorithms/tree/master/Algorithm%20Challenges--The%20Dojo%20Collection/Chapter%205%20--%20Linked%20Lists)
 3. [Chapter 8: Linked Lists, Part II](https://github.com/amalfushi/Algorithms/tree/master/Algorithm%20Challenges--The%20Dojo%20Collection/Chapter%208%20--%20Linked%20Lists%2C%20Part%20II)
 4. [Chapter 9: Recursion](https://github.com/amalfushi/Algorithms/tree/master/Algorithm%20Challenges--The%20Dojo%20Collection/Chapter%209%20--%20Recursion)
+5. [Chapter 10: Strings, Part II](https://github.com/amalfushi/Algorithms/tree/master/Algorithm%20Challenges--The%20Dojo%20Collection/Chapter%2010%20--%20Strings%2C%20Part%20II)
+6. [Chapter 11: Trees](https://github.com/amalfushi/Algorithms/tree/master/Algorithm%20Challenges--The%20Dojo%20Collection/Chapter%2011%20--%20Trees)
 
 
 ##### Cracking the Coding Interview
