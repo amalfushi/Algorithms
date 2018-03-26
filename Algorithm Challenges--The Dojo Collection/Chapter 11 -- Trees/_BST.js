@@ -84,6 +84,15 @@ class BST {
         return this.root == null;
     }
 
+    height(node = this.root) {
+        return !node ? 0 : node.left && node.right ? Math.max(1 + this.height(node.left), 1 + this.height(node.left)) : node.left ? 1 + this.height(node.left) : node.right ? 1 + this.height(node.right) : 1;
+    }
+
+    shortest(node = this.root) {
+        if (!node) return 0;
+        return 1 + Math.min(this.shallowest(node.left), this.shallowest(node.right))
+    }
+
     toString() {
         this.traverseTree((node) => console.log(node.value));
     }
