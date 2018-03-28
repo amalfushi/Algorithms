@@ -44,6 +44,14 @@ class BST {
         return false;
     }
 
+    find(val, node = this.root) {
+        if (node) {
+            if (node.value == val) return node;
+            else return this.find(val, node.left) || this.find(val, node.right);
+        }
+        return null;
+    }
+
     min() {
         let cur = this.root;
         while (cur) {
@@ -93,14 +101,15 @@ class BST {
         return 1 + Math.min(this.shallowest(node.left), this.shallowest(node.right))
     }
 
-    toString() {
+    toString() { // leaves an annoying 'undefined' at the end
         this.traverseTree((node) => console.log(node.value));
     }
 
 
     //general purpose tree traversal
-    traverseTree(callback, order = "inorder", node = this.root) {
+    traverseTree(callback, order = "preorder", node = this.root) {
         if (node) {
+            // console.log(node);
             switch (order) {
                 case "inorder":
                     this.traverseTree(callback, "inorder", node.left);
