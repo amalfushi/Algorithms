@@ -101,8 +101,10 @@ class BST {
         return 1 + Math.min(this.shallowest(node.left), this.shallowest(node.right))
     }
 
-    toString() { // leaves an annoying 'undefined' at the end
-        this.traverseTree((node) => console.log(node.value));
+    toString(order = "preorder") { // leaves an annoying 'undefined' at the end
+        let arr = [];
+        this.traverseTree((node) =>arr.push(node.value), order);
+        return arr
     }
 
 
