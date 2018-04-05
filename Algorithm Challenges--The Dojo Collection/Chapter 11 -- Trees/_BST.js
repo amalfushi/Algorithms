@@ -3,6 +3,7 @@ class BTNode {
         this.value = val;
         this.left = null;
         this.right = null;
+        this.parent = null;
     }
 }
 
@@ -32,6 +33,7 @@ class BST {
                     cur = cur.left;
                 }
             }
+            nn.parent = cur;
         }
         return this;
     }
