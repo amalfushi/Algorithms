@@ -11,6 +11,9 @@ function arrayToBST(arr, start = 0, end = arr.length - 1) {
 
     node.left = arrayToBST(arr, start, mid - 1);
     node.right = arrayToBST(arr, mid + 1, end);
+    if (node.left) node.left.parent = node;
+    if (node.right) node.right.parent = node;
+    
     return node;
 }
 
