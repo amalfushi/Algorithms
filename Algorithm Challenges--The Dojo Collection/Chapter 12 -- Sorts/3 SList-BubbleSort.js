@@ -39,7 +39,7 @@ SLL.prototype.bubbleSort = function () {
             right = left.next;
         }
     }
-    return list;
+    return this;
 }
 
 let list = new SLL();
