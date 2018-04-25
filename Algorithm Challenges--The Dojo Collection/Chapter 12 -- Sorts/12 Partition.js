@@ -23,10 +23,4 @@ function partitionArray(arr) {
     return arr;
 }
 
-function swap(arr, firstIndex, secondIndex) {
-    let temp = arr[firstIndex];
-    arr[firstIndex] = arr[secondIndex];
-    arr[secondIndex] = temp;
-}
-
 console.log(partitionArray([5, 4, 9, 2, 5, 3]));
