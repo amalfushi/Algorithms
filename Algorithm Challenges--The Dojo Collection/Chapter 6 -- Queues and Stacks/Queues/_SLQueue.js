@@ -20,8 +20,7 @@ class SLQueue {
         let current = this.head;
         
         while (current) output.push(current.value), current = current.next;
-
-        return output.join(", ");
+        return "Tail: " + output.reverse().join(" <- ") + " :Head";
     }
 
     enqueue(val) {

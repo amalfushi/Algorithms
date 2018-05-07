@@ -20,7 +20,7 @@ class SLStack {
             output.push(current.value);
             current = current.next;
         }
-        return output.join(", ");
+        return "Top: " + output.join(" -> ");
     }
 
     push(val) {
