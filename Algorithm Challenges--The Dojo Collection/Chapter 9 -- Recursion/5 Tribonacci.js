@@ -1,4 +1,4 @@
-// recursively comput and return the nth 'Tribonacci" value where each value is the sum of the previos 3 numbers.  As earlier, treat the first 3 numbers as 0, 0, and 1
+// recursively compute and return the nth 'Tribonacci" value where each value is the sum of the previos 3 numbers.  As earlier, treat the first 3 numbers as 0, 0, and 1
 /* Example:
 (3) => 1 (0+0+1)
 (4) => 2 (0+1+1)
@@ -15,6 +15,7 @@ function rTribonacci(n) {
     return rTribonacci(n - 1) + rTribonacci(n - 2) + rTribonacci(n-3);
 }
 
+// one-liner version
 let trib = (n) => n < 2 ? 0 : n <= 3 ? 1 : trib(n - 1) + trib(n - 2) + trib(n - 3);
 
 
