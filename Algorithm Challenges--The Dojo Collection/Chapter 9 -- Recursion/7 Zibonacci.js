@@ -10,16 +10,15 @@
 
 
 function Zibonacci(n) {
+    if (n < 0) return 0;
     if (n < 2) return 1;
-    if (n == 2) return 2;
-    if (n % 2 != 0) return n + Zibonacci(n - 1) + 1;
-    else return n + Zibonacci(n + 1) + 1;
+    if (n === 2) return 2;
+    if (n % 2 !== 0) {
+        let num = (n-1)/2;
+        return Zibonacci(num) + Zibonacci(num - 1) + 1;
+    }
+    let num = n/2;
+    return Zibonacci(num) + Zibonacci(num + 1) + 1;
 }
 
-console.log(Zibonacci(1))
-console.log(Zibonacci(2))
-console.log(Zibonacci(3))
-console.log(Zibonacci(4))// causes a stack overflow starting here
-console.log(Zibonacci(5))
-console.log(Zibonacci(6))
-console.log(Zibonacci(7))
+for (let i = 0; i < 21; i++) console.log(i+":", Zibonacci(i))
