@@ -18,24 +18,24 @@ output = ([[3, 2, 1, 4, 3],
 
 function FloodFill(canvas, start, color) {
     let sample = canvas[start[0]][start[1]];
-    Replace(start);
+    if (sample[start[0]][start[1]]) Replace(start);
     return canvas;
 
-    function Replace(coords){
+    function Replace(coords) {
         let y = coords[0],
             x = coords[1];
-        canvas[y][x] = color; 
+        canvas[y][x] = color;
         // if the row above or below exists and matches the sample, recursive call
-        if (canvas[y-1] && canvas[y-1][x] == sample) Replace([y-1, x]);
-        if (canvas[y+1] && canvas[y+1][x] == sample) Replace([y+1, x]);
+        if (canvas[y - 1] && canvas[y - 1][x] == sample) Replace([y - 1, x]);
+        if (canvas[y + 1] && canvas[y + 1][x] == sample) Replace([y + 1, x]);
         // if the column to the left or right exists and matches the sampe, recursive call
-        if (canvas[y][x-1] && canvas[y][x-1] == sample) Replace([y, x-1]);
-        if (canvas[y][x+1] && canvas[y][x+1] == sample) Replace([y, x+1]);
+        if (canvas[y][x - 1] && canvas[y][x - 1] == sample) Replace([y, x - 1]);
+        if (canvas[y][x + 1] && canvas[y][x + 1] == sample) Replace([y, x + 1]);
     }
 }
 
 console.log(FloodFill([[3, 2, 3, 4, 3],
-    [2, 3, 3, 4, 0],
-    [7, 3, 3, 5, 3],
-    [6, 5, 3, 4, 1],
-    [1, 2, 3, 3, 3]], [2, 2], 1))
+[2, 3, 3, 4, 0],
+[7, 3, 3, 5, 3],
+[6, 5, 3, 4, 1],
+[1, 2, 3, 3, 3]], [2, 2], 1))
